@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TestPlugin : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class TestPlugin : MonoBehaviour
     AndroidJavaObject _pluginInstance;
 
     public TextMeshProUGUI label;
+    public Image imag;
 
     private void Start()
     {
@@ -21,12 +23,18 @@ public class TestPlugin : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        Debug.Log("aia");
+    }
+
     public void RunPlugin()
     {
         Debug.Log("Run Plugin");
         if (Application.platform == RuntimePlatform.Android)
         {
             label.text = _pluginInstance.Call<string>("getLogTag");
+            imag.color = Color.red;
         }
     }
 #endif

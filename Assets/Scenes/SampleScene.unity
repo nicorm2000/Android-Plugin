@@ -150,14 +150,14 @@ RectTransform:
   m_GameObject: {fileID: 687336258}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.9446, y: 2.9446, z: 2.9446}
+  m_LocalScale: {x: 7.4736896, y: 7.4736896, z: 7.4736896}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2138059376}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -82}
+  m_AnchoredPosition: {x: 0, y: -253}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &687336260
@@ -614,7 +614,7 @@ RectTransform:
   m_GameObject: {fileID: 1220186947}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 7.0365, y: 7.0365, z: 7.0365}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1008706685}
@@ -622,7 +622,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -179}
+  m_AnchoredPosition: {x: 0, y: -688}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1220186949
@@ -746,14 +746,14 @@ RectTransform:
   m_GameObject: {fileID: 1925023442}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 3.3821232, y: 3.3821232, z: 3.3821232}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2138059376}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -82}
+  m_AnchoredPosition: {x: 0, y: -249}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1925023444
@@ -810,8 +810,8 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -886,6 +886,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   label: {fileID: 1925023444}
+  imag: {fileID: 687336260}
 --- !u!114 &2138059373
 MonoBehaviour:
   m_ObjectHideFlags: 0
