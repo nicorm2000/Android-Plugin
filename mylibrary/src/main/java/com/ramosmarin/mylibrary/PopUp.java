@@ -20,7 +20,7 @@ public class PopUp
 
     public interface AlertViewCallBack
     {
-        public void OnButtonTap(int id);
+        public void OnButtonTapped(int id);
     }
 
     public void ShowAlertView(String[] stringArray, final AlertViewCallBack callBack)
@@ -37,7 +37,7 @@ public class PopUp
             {
                 dialog.dismiss();
                 Log.i(LOGTAG, "Tapped: " + id);
-                callBack.OnButtonTap(id);
+                callBack.OnButtonTapped(id);
             }
         };
 
