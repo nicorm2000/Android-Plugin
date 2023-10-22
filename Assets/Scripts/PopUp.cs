@@ -21,8 +21,8 @@ public class PopUp : MonoBehaviour
     private const string packName = "com.ramosmarin.mylibrary";
     private const string loggerClassName = "PopUp";
 
-    private static AndroidJavaClass popupController = null;
-    private static AndroidJavaObject popupControllerInstance = null;
+    private static AndroidJavaClass popupManager = null;
+    private static AndroidJavaObject popupManagerInstance = null;
 
     private string title = "TitleText";
     private string message = "MessageText";
@@ -31,7 +31,7 @@ public class PopUp : MonoBehaviour
     public void ShowPopup()
     {
 #if UNITY_ANDROID && !UNITY_EDITOR
-        if (popupControllerInstance == null)
+        if (popupManagerInstance == null)
         {
             Init();
         }
@@ -52,7 +52,7 @@ public class PopUp : MonoBehaviour
 
         if (Application.platform == RuntimePlatform.Android)
         {
-            popupControllerInstance?.Call("ShowAlertView", new object[] { strings, new AlertViewCallBack(handler) });
+            popupManagerInstance?.Call("ShowAlertView", new object[] { strings, new AlertViewCallBack(handler) });
         }
         else
         {
@@ -63,12 +63,12 @@ public class PopUp : MonoBehaviour
     private static void Init()
     {
 #if UNITY_ANDROID && !UNITY_EDITOR
-        popupController = new AndroidJavaClass(packName + "." + loggerClassName);
+        popupManager = new AndroidJavaClass(packName + "." + loggerClassName);
         AndroidJavaClass unityJC = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
         AndroidJavaObject activity = unityJC.GetStatic<AndroidJavaObject>("currentActivity");
-        popupController.SetStatic("mainActivity", activity);
+        popupManager.SetStatic("mainAct", activity);
 
-        popupControllerInstance = popupController.CallStatic<AndroidJavaObject>("GetInstance");
+        popupManagerInstance = popupManager.CallStatic<AndroidJavaObject>("GetInstance");
 #endif
     }
 }
