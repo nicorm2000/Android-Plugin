@@ -47,12 +47,12 @@ public class PopUp
 
         if (stringArray.length > 3)
         {
-            alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, stringArray[3], MyClickListener);
+            alertDialog.setButton(AlertDialog.BUTTON_NEGATIVE, stringArray[3], MyClickListener);
         }
 
         if (stringArray.length > 4)
         {
-            alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, stringArray[4], MyClickListener);
+            alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, stringArray[4], MyClickListener);
         }
 
         alertDialog.show();
