@@ -42,7 +42,7 @@ public class FileManager : MonoBehaviour
                     {
                         Init();
                     }
-                    fileManagerInstance?.Call("DeleteFile");
+                    fileManagerInstance?.Call("DeleteFiles");
                 }
             });
     }
